@@ -1,0 +1,221 @@
+{ "frames": {
+   "Hero #idle 0.aseprite": {
+    "frame": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 200
+   },
+   "Hero #idle 1.aseprite": {
+    "frame": { "x": 112, "y": 0, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 200
+   },
+   "Hero #idle 2.aseprite": {
+    "frame": { "x": 224, "y": 0, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 200
+   },
+   "Hero #idle 3.aseprite": {
+    "frame": { "x": 336, "y": 0, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 200
+   },
+   "Hero #run 0.aseprite": {
+    "frame": { "x": 0, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 100
+   },
+   "Hero #run 1.aseprite": {
+    "frame": { "x": 112, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 100
+   },
+   "Hero #run 2.aseprite": {
+    "frame": { "x": 224, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 100
+   },
+   "Hero #run 3.aseprite": {
+    "frame": { "x": 336, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 100
+   },
+   "Hero #run 4.aseprite": {
+    "frame": { "x": 448, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 100
+   },
+   "Hero #run 5.aseprite": {
+    "frame": { "x": 560, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 100
+   },
+   "Hero #run 6.aseprite": {
+    "frame": { "x": 672, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 100
+   },
+   "Hero #run 7.aseprite": {
+    "frame": { "x": 784, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 100
+   },
+   "Hero #attack 0.aseprite": {
+    "frame": { "x": 0, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 100
+   },
+   "Hero #attack 1.aseprite": {
+    "frame": { "x": 112, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 100
+   },
+   "Hero #attack 2.aseprite": {
+    "frame": { "x": 224, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 100
+   },
+   "Hero #attack 3.aseprite": {
+    "frame": { "x": 336, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 100
+   },
+   "Hero #attack 4.aseprite": {
+    "frame": { "x": 448, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 100
+   },
+   "Hero #attack 5.aseprite": {
+    "frame": { "x": 560, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 100
+   },
+   "Hero #attack 6.aseprite": {
+    "frame": { "x": 672, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 100
+   },
+   "Hero #attack 7.aseprite": {
+    "frame": { "x": 784, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 100
+   },
+   "Hero #attack 8.aseprite": {
+    "frame": { "x": 896, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 100
+   },
+   "Hero #attack 9.aseprite": {
+    "frame": { "x": 1008, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 100
+   },
+   "Hero #attack 10.aseprite": {
+    "frame": { "x": 1120, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 100
+   },
+   "Hero #attack 11.aseprite": {
+    "frame": { "x": 1232, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 100
+   },
+   "Hero #attack 12.aseprite": {
+    "frame": { "x": 1344, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 120, "h": 120 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.2-arm64",
+  "image": "Hero.png",
+  "format": "I8",
+  "size": { "w": 1456, "h": 336 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "idle", "from": 0, "to": 3, "direction": "forward", "color": "#000000ff" },
+   { "name": "run", "from": 4, "to": 11, "direction": "forward", "color": "#000000ff" },
+   { "name": "attack", "from": 12, "to": 24, "direction": "forward", "color": "#000000ff" }
+  ],
+  "layers": [
+   { "name": "Hero", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

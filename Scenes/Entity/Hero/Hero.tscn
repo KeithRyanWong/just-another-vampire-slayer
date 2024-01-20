@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bihy3xybgoqqk"]
+
+[ext_resource type="Script" path="res://Game/Player/Player.cs" id="1_2l255"]
+[ext_resource type="SpriteFrames" uid="uid://c3a4eg22j2bg4" path="res://Assets/Entity/Hero/Hero.tres" id="1_tonvi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fkbrx"]
+radius = 13.0
+height = 40.0
+
+[node name="Hero" type="CharacterBody2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_2l255")
+MaxSpeed = 500.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4, -11)
+sprite_frames = ExtResource("1_tonvi")
+animation = &"attack"
+frame_progress = 0.78528
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_fkbrx")
