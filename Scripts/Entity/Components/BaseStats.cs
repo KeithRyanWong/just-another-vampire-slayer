@@ -1,7 +1,5 @@
 using Godot;
 
-namespace VampireSurvivor.Game.Entity;
-
 [GlobalClass]
 public partial class BaseStats : Resource
 {

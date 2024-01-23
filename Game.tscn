@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bag1n83bgi8jo"]
+
+[ext_resource type="PackedScene" uid="uid://bihy3xybgoqqk" path="res://Assets/Entity/Hero/Hero.tscn" id="1_3er75"]
+[ext_resource type="PackedScene" uid="uid://cs4oxioevdlye" path="res://Assets/Entity/Vex/Vex.tscn" id="2_yfkaw"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Hero" parent="." instance=ExtResource("1_3er75")]
+position = Vector2(775, 424)
+
+[node name="Vex" parent="." instance=ExtResource("2_yfkaw")]
+position = Vector2(240, 280)
+TargetNode = NodePath("../Hero")

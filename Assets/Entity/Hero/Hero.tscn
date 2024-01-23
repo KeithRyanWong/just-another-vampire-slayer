@@ -2,7 +2,7 @@
 
 [ext_resource type="SpriteFrames" uid="uid://c3a4eg22j2bg4" path="res://Assets/Entity/Hero/Hero.tres" id="1_tonvi"]
 [ext_resource type="Script" path="res://Scripts/Entity/Hero/Hero.cs" id="1_vnvh1"]
-[ext_resource type="Script" path="res://Scripts/Entity/BaseStats.cs" id="2_laa36"]
+[ext_resource type="Script" path="res://Scripts/Entity/Components/BaseStats.cs" id="2_laa36"]
 [ext_resource type="PackedScene" uid="uid://cxekjpgtt8jic" path="res://Assets/Entity/Components/MovementComponent.tscn" id="4_j5qrl"]
 [ext_resource type="PackedScene" uid="uid://dy5qw2adm22bs" path="res://Assets/Entity/Components/FiniteStateMachine.tscn" id="4_wxcto"]
 [ext_resource type="PackedScene" uid="uid://07aymt0kqmig" path="res://Assets/Entity/Components/States/IdleState.tscn" id="5_kqv0l"]

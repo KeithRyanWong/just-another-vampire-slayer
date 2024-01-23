@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=3 uid="uid://cs4oxioevdlye"]
+
+[ext_resource type="Script" path="res://Scripts/Entity/Vex/Vex.cs" id="1_3ayso"]
+[ext_resource type="SpriteFrames" uid="uid://b4wknp6fkig85" path="res://Assets/Entity/Vex/Vex.tres" id="1_t32wh"]
+[ext_resource type="Script" path="res://Scripts/Entity/Components/BaseStats.cs" id="2_e5rib"]
+[ext_resource type="PackedScene" uid="uid://cxekjpgtt8jic" path="res://Assets/Entity/Components/MovementComponent.tscn" id="2_ousae"]
+[ext_resource type="PackedScene" uid="uid://dy5qw2adm22bs" path="res://Assets/Entity/Components/FiniteStateMachine.tscn" id="3_q775r"]
+[ext_resource type="PackedScene" uid="uid://bcptvhnl2370d" path="res://Assets/Entity/Components/States/MoveState.tscn" id="4_51mwc"]
+
+[sub_resource type="Resource" id="Resource_mp0r0"]
+script = ExtResource("2_e5rib")
+MaxSpeed = 300.0
+Acceleration = 1500.0
+Friction = 1200.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5wm5o"]
+radius = 6.0
+
+[node name="Vex" type="CharacterBody2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_3ayso")
+IsNPC = true
+Stats = SubResource("Resource_mp0r0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_t32wh")
+animation = &"attack"
+frame_progress = 0.789873
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5wm5o")
+
+[node name="MovementComponent" parent="." instance=ExtResource("2_ousae")]
+CharacterBody = NodePath("..")
+AnimatedSprite = NodePath("../AnimatedSprite2D")
+
+[node name="FiniteStateMachine" parent="." instance=ExtResource("3_q775r")]
+InitialState = NodePath("MoveState")
+
+[node name="MoveState" parent="FiniteStateMachine" instance=ExtResource("4_51mwc")]
+MovementComponent = NodePath("../../MovementComponent")
+MoveAnimationName = "run"

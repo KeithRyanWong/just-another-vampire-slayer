@@ -1,18 +1,18 @@
 using Godot;
-using System;
-using VampireSurvivor.Game.Entity;
+
 
 public partial class Entity : CharacterBody2D
 {
 	[ExportGroup("NPC Setup")]
 	[Export] public bool IsNPC;
-	[Export] public NodePath Target;
+	[Export] public NodePath TargetNode;
 	
 	[ExportGroup("Stats")]
 	[Export] public BaseStats Stats;
 	[Export] private Node HealthComponent;
 	
-	private AnimatedSprite2D Sprite;
+	public AnimatedSprite2D Sprite;
+	public CharacterBody2D Target;
 	
 	public Vector2 Axis;
 
@@ -22,6 +22,7 @@ public partial class Entity : CharacterBody2D
 		Axis = Vector2.Zero;
 
 		Sprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		if (IsNPC) Target = GetNode<CharacterBody2D>(TargetNode);
 	}
 
 	public override void _Process(double delta)

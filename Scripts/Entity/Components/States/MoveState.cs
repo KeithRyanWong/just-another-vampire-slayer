@@ -31,7 +31,7 @@ public partial class MoveState : State
         if (_movementComponent.TryMovement)
         {
             _movementComponent.ApplyMovement((float)delta);
-            _movementComponent.Sprite.FlipH = _movementComponent.GetInputAxis().X switch
+            _movementComponent.Sprite.FlipH = _movementComponent.GetDirectionalAxis().X switch
             {
                 > 0 => false,
                 < 0 => true,

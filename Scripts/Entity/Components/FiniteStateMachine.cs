@@ -1,7 +1,6 @@
 using Godot;
 using System;
 using System.Collections.Generic;
-using VampireSurvivor.Game.Entity;
 
 public partial class FiniteStateMachine : Node
 {
