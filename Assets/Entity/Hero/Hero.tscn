@@ -24,6 +24,7 @@ script = ExtResource("1_vnvh1")
 Stats = SubResource("Resource_2phao")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(-4, -11)
 sprite_frames = ExtResource("1_tonvi")
 animation = &"run"

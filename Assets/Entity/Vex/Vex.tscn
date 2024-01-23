@@ -17,12 +17,13 @@ Friction = 1200.0
 radius = 6.0
 
 [node name="Vex" type="CharacterBody2D"]
-scale = Vector2(3, 3)
+scale = Vector2(4, 4)
 script = ExtResource("1_3ayso")
 IsNPC = true
 Stats = SubResource("Resource_mp0r0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 sprite_frames = ExtResource("1_t32wh")
 animation = &"attack"
 frame_progress = 0.789873
