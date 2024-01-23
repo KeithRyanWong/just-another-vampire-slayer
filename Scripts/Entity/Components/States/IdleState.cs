@@ -1,7 +1,5 @@
 using Godot;
 
-namespace VampireSurvivor.Game.Entity.Components.States;
-
 public partial class IdleState : State
 {
     [Export] public NodePath MovementComponent;

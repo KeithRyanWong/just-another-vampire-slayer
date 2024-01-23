@@ -4,6 +4,11 @@ using VampireSurvivor.Game.Entity;
 
 public partial class Entity : CharacterBody2D
 {
+	[ExportGroup("NPC Setup")]
+	[Export] public bool IsNPC;
+	[Export] public NodePath Target;
+	
+	[ExportGroup("Stats")]
 	[Export] public BaseStats Stats;
 	[Export] private Node HealthComponent;
 	

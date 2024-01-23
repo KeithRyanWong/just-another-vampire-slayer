@@ -1,21 +1,17 @@
 using Godot;
-
-namespace VampireSurvivor.Game.Entity.Components;
+using VampireSurvivor.Game.Entity;
 
 public partial class MovementComponent : Node
 {
     [ExportGroup("CharacterNodes")]
     [Export] public NodePath CharacterBody;
     [Export] public NodePath AnimatedSprite;
-    [Export] public NodePath Target;
     
     // [Export] public NodePath AnimatedSprite;
-    private CharacterBody2D _character;
-    private CharacterBody2D _target;
+    private Entity _character;
+    private Entity _target;
     private BaseStats _stats;
     public AnimatedSprite2D Sprite;
-
-    public bool IsNpc => Target != null && !Target.IsEmpty;
 
     public bool TryMovement => GetInputAxis() != Vector2.Zero;
 
@@ -25,9 +21,9 @@ public partial class MovementComponent : Node
     {
         base._Ready();
 
-        _character = GetNode<CharacterBody2D>(CharacterBody);
+        _character = GetNode<Entity>(CharacterBody);
         _stats = (BaseStats)GetNodeAndResource(CharacterBody + ":Stats")[1];
-        if (IsNpc) _target = GetNode<CharacterBody2D>(Target);
+        if (_character.IsNPC) _target = GetNode<Entity>(_character.Target);
         Sprite = GetNode<AnimatedSprite2D>(AnimatedSprite);
         
         Axis = Vector2.Zero;
