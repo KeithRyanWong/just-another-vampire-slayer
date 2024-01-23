@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3 uid="uid://bihy3xybgoqqk"]
+
+[ext_resource type="SpriteFrames" uid="uid://c3a4eg22j2bg4" path="res://Assets/Entity/Hero/Hero.tres" id="1_tonvi"]
+[ext_resource type="Script" path="res://Scripts/Entity/Hero/Hero.cs" id="1_vnvh1"]
+[ext_resource type="Script" path="res://Scripts/Entity/BaseStats.cs" id="2_laa36"]
+[ext_resource type="PackedScene" uid="uid://dy5qw2adm22bs" path="res://Assets/Entity/Components/FiniteStateMachine.tscn" id="4_wxcto"]
+[ext_resource type="PackedScene" uid="uid://07aymt0kqmig" path="res://Assets/Entity/Components/States/IdleState.tscn" id="5_kqv0l"]
+[ext_resource type="PackedScene" uid="uid://bcptvhnl2370d" path="res://Assets/Entity/Components/States/MoveState.tscn" id="6_g3csq"]
+
+[sub_resource type="Resource" id="Resource_2phao"]
+script = ExtResource("2_laa36")
+MaxSpeed = 700.0
+Acceleration = 1500.0
+Friction = 1200.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fkbrx"]
+radius = 13.0
+height = 40.0
+
+[node name="Hero" type="CharacterBody2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_vnvh1")
+Stats = SubResource("Resource_2phao")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4, -11)
+sprite_frames = ExtResource("1_tonvi")
+animation = &"attack"
+frame_progress = 0.112752
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_fkbrx")
+
+[node name="FiniteStateMachine" parent="." instance=ExtResource("4_wxcto")]
+InitialState = NodePath("IdleState")
+CharacterBody2D = NodePath("..")
+AnimatedSprite = NodePath("../AnimatedSprite2D")
+
+[node name="IdleState" parent="FiniteStateMachine" instance=ExtResource("5_kqv0l")]
+IdleAnimationName = "idle"
+
+[node name="MoveState" parent="FiniteStateMachine" instance=ExtResource("6_g3csq")]
+RunAnimationName = "run"

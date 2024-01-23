@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dy5qw2adm22bs"]
+
+[ext_resource type="Script" path="res://Scripts/Entity/Components/FiniteStateMachine.cs" id="1_j8oeb"]
+
+[node name="FiniteStateMachine" type="Node"]
+script = ExtResource("1_j8oeb")

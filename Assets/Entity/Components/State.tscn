@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://do33g235fq7h6"]
+
+[ext_resource type="Script" path="res://Scripts/Entity/Components/State.cs" id="1_agips"]
+
+[node name="State" type="Node"]
+script = ExtResource("1_agips")

@@ -7,8 +7,9 @@
     <RootNamespace>VampireSurvivor</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Game\Entity\Attacks\" />
-    <Folder Include="Game\Map\" />
-    <Folder Include="Game\Player\" />
+    <Compile Remove="Game\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Game\**" />
   </ItemGroup>
 </Project>
