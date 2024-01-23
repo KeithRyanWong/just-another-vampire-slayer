@@ -2,41 +2,40 @@ using Godot;
 
 namespace VampireSurvivor.Game.Entity.Components.States;
 
-public partial class IdleState : MovementState
+public partial class IdleState : State
 {
-    [Export] public string IdleAnimationName;
+    [Export] public NodePath MovementComponent;
+    private MovementComponent _movementComponent;
+    [Export] public string IdleAnimationName;   
     
     public override void _Ready()
     {
         base._Ready();
+        _movementComponent = GetNode<MovementComponent>(MovementComponent);
     }
 
     public override void Enter()
     {
         base.Enter();
-        Fsm.Sprite.Play(IdleAnimationName);
+        _movementComponent.Sprite.Play(IdleAnimationName);
     }
 
     public override void Exit()
     {
         base.Exit();
-        Fsm.Sprite.Stop();
+        _movementComponent.Sprite.Stop();
     }
 
     public override void PhysicsUpdate(double delta)
     {
         base.PhysicsUpdate(delta);
-
-        Axis = GetInputAxis();
-        if (Axis == Vector2.Zero)
+        if (!_movementComponent.TryMovement)
         {
-            ApplyFriction(Fsm.Stats.Friction * (float) delta);
+            _movementComponent.ApplyFriction((float) delta);
         }
         else
         {
             Transition("MoveState");
         }
-
-        Fsm.CharacterBody.MoveAndSlide();
     }
 }

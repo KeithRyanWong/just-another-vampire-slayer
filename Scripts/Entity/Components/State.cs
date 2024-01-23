@@ -4,7 +4,7 @@ using System;
 public partial class State : Node
 {
 	public static readonly string TransitionStateSignal = "TransitionState";
-	public FiniteStateMachine Fsm;
+
 	public override void _Ready()
 	{
 		base._Ready();

@@ -11,36 +11,20 @@ public partial class FiniteStateMachine : Node
 	[ExportGroup("Setup")]
 	[Export]
 	public NodePath InitialState;
-	[Export]
-	public NodePath CharacterBody2D;
-	public CharacterBody2D CharacterBody;
-	// [Export] 
-	// public NodePath StatSheet;
-	public BaseStats Stats;
-	[Export] 
-	public NodePath AnimatedSprite;
-	public AnimatedSprite2D Sprite;
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		Sprite = GetNode<AnimatedSprite2D>(AnimatedSprite);
-		CharacterBody = GetNode<CharacterBody2D>(CharacterBody2D);
-		Stats = (BaseStats)GetNodeAndResource(CharacterBody2D + ":Stats")[1];
-		
-		
 		_states = new Dictionary<string, State>();
-		foreach (Node child in GetChildren())
+		foreach (var child in GetChildren())
 		{
-			if (child is State state)
-			{
-				_states[state.Name.ToString().ToLower()] = state;
-				state.Fsm = this;
-				// Don't think I need this ready call as the framework should call anything on the scene tree
-				// state._Ready();
-				state.Exit();
-				state.Connect(State.TransitionStateSignal, new Callable(this, nameof(TransitionState)));
-			}
+			if (child is not State state) continue;
+			
+			_states[state.Name.ToString().ToLower()] = state;
+			// Don't think I need this ready call as the framework should call anything on the scene tree
+			// state._Ready();
+			state.Exit();
+			state.Connect(State.TransitionStateSignal, new Callable(this, nameof(TransitionState)));
 		}
 
 		_currentState = GetNode<State>(InitialState);
