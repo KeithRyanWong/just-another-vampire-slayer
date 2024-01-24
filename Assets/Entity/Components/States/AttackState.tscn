@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1k40w837rntd"]
+
+[ext_resource type="Script" path="res://Scripts/Entity/Components/States/AttackState.cs" id="1_6rc6c"]
+
+[node name="AttackState" type="Node"]
+script = ExtResource("1_6rc6c")
