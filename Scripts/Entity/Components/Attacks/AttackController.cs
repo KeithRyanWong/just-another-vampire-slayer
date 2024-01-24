@@ -2,6 +2,8 @@ using Godot;
 
 namespace VampireSurvivor.Scripts.Entity.Components.Attacks;
 
+// Attack Controller is responsible for starting and tracking all live attacks belonging to Character.
+//
 public partial class AttackController : Node
 {
     [Export] public NodePath Character;
