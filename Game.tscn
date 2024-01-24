@@ -6,7 +6,11 @@
 [node name="Game" type="Node2D"]
 
 [node name="Hero" parent="." instance=ExtResource("1_3er75")]
-position = Vector2(775, 424)
+position = Vector2(569, 347)
+
+[node name="Camera2D" type="Camera2D" parent="Hero"]
+position = Vector2(1.33334, -4.00002)
+scale = Vector2(0.333333, 0.333333)
 
 [node name="Vex" parent="." instance=ExtResource("2_yfkaw")]
 position = Vector2(240, 280)

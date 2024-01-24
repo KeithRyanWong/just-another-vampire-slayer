@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cs4oxioevdlye"]
+[gd_scene load_steps=11 format=3 uid="uid://cs4oxioevdlye"]
 
 [ext_resource type="Script" path="res://Scripts/Entity/Vex/Vex.cs" id="1_3ayso"]
 [ext_resource type="SpriteFrames" uid="uid://b4wknp6fkig85" path="res://Assets/Entity/Vex/Vex.tres" id="1_t32wh"]
@@ -6,12 +6,17 @@
 [ext_resource type="PackedScene" uid="uid://cxekjpgtt8jic" path="res://Assets/Entity/Components/MovementComponent.tscn" id="2_ousae"]
 [ext_resource type="PackedScene" uid="uid://dy5qw2adm22bs" path="res://Assets/Entity/Components/FiniteStateMachine.tscn" id="3_q775r"]
 [ext_resource type="PackedScene" uid="uid://bcptvhnl2370d" path="res://Assets/Entity/Components/States/MoveState.tscn" id="4_51mwc"]
+[ext_resource type="PackedScene" uid="uid://rp4gvfd71n7v" path="res://Assets/Entity/Components/HealthComponent.tscn" id="7_4ygkp"]
+[ext_resource type="PackedScene" uid="uid://ci5ph81o2r8nd" path="res://Assets/Entity/Components/HealthBarComponent.tscn" id="8_q2yyw"]
 
 [sub_resource type="Resource" id="Resource_mp0r0"]
 script = ExtResource("2_e5rib")
-MaxSpeed = 300.0
-Acceleration = 1500.0
+MaxSpeed = 280.0
+Acceleration = 1300.0
 Friction = 1200.0
+StartingDashCount = 0
+StartingHealth = 50
+StartingAttackDamage = 10
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5wm5o"]
 radius = 6.0
@@ -41,3 +46,14 @@ InitialState = NodePath("MoveState")
 [node name="MoveState" parent="FiniteStateMachine" instance=ExtResource("4_51mwc")]
 MovementComponent = NodePath("../../MovementComponent")
 MoveAnimationName = "run"
+
+[node name="HealthComponent" parent="." instance=ExtResource("7_4ygkp")]
+Character = NodePath("..")
+
+[node name="HealthBarComponent" parent="." instance=ExtResource("8_q2yyw")]
+offset_left = -17.5
+offset_top = -34.0
+offset_right = 102.5
+offset_bottom = 86.0
+scale = Vector2(0.3, 0.3)
+HealthComponentNode = NodePath("../HealthComponent")

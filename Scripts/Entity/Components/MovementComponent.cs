@@ -8,7 +8,7 @@ public partial class MovementComponent : Node
     
     // [Export] public NodePath AnimatedSprite;
     private Entity _character;
-    private BaseStats _stats;
+    private BaseStats Stats => _character.Stats;
     public AnimatedSprite2D Sprite;
 
     public bool TryMovement => GetDirectionalAxis() != Vector2.Zero;
@@ -20,7 +20,6 @@ public partial class MovementComponent : Node
         base._Ready();
 
         _character = GetNode<Entity>(CharacterBody);
-        _stats = (BaseStats)GetNodeAndResource(CharacterBody + ":Stats")[1];
         Sprite = GetNode<AnimatedSprite2D>(AnimatedSprite);
         
         Axis = Vector2.Zero;
@@ -52,7 +51,7 @@ public partial class MovementComponent : Node
     
     public void ApplyFriction(float delta)
     {
-        float amount = _stats.Friction * delta;
+        float amount = Stats.Friction * delta;
         if (_character.Velocity.Length() > amount)
         {
             _character.Velocity -= _character.Velocity.Normalized() * amount;
@@ -67,9 +66,9 @@ public partial class MovementComponent : Node
     
     public void ApplyMovement(float delta)
     {
-        Vector2 effectiveAcceleration = GetDirectionalAxis() * _stats.Acceleration * delta;
+        Vector2 effectiveAcceleration = GetDirectionalAxis() * Stats.Acceleration * delta;
         _character.Velocity += effectiveAcceleration;
-        _character.Velocity = _character.Velocity.LimitLength(_stats.MaxSpeed);
+        _character.Velocity = _character.Velocity.LimitLength(Stats.MaxSpeed);
         _character.MoveAndSlide();
     }
 }
